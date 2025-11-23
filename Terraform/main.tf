@@ -1,7 +1,7 @@
 terraform {
   backend "remote" {
     # The name of your Terraform Cloud organization.
-    organization = "TeKanAid"
+    organization = "srepro"
 
     # The name of the Terraform Cloud workspace to store Terraform state files in.
     workspaces {
@@ -11,10 +11,10 @@ terraform {
 }
 
 module "eks" {
-  source  = "app.terraform.io/TeKanAid/eks/aws"
+  source  = "app.terraform.io/srepro/eks/aws"
   version = "0.0.7"
 
-  region               = "us-east-1"
+  region               = "eu-central-1"
   cluster_version      = "1.27"
   cluster_name         = "my_eks_cluster"
   instance_types       = ["t2.small"]
