@@ -15,7 +15,7 @@ module "eks" {
   version = "0.0.7"
 
   region               = "eu-central-1"
-  cluster_version      = "1.30"
+  cluster_version      = "1.28"
   cluster_name         = "my_eks_cluster"
   instance_types       = ["t2.small"]
   vpc_cidr             = "10.0.0.0/16"
