@@ -14,9 +14,9 @@ module "eks" {
   source  = "app.terraform.io/srepro/eks/aws"
   version = "0.0.7"
 
-  region               = "eu-central-1"
-  cluster_version      = "1.28"
-  cluster_name         = "my_eks_cluster"
+  region               = var.region
+  cluster_version      = var.cluster_version
+  cluster_name         = var.cluster_name
   instance_types       = ["t2.small"]
   vpc_cidr             = "10.0.0.0/16"
   cluster_min_size     = 1
