@@ -4,6 +4,7 @@ metadata:
   name: dev-eks-cluster
   annotations:
     github.com/project-slug: ashishtkumar/aws-eks
+    github.com/workflows: manage-eks-cluster.yml
   description: AWS EKS cluster managed by Terraform
   tags:
     - aws
