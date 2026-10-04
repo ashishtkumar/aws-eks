@@ -12,6 +12,8 @@ terraform plan
 terraform apply
 ```
 
+The default EKS Kubernetes version is `1.36` (configured by `cluster_version` in `Terraform/variables.tf`). Override it with a version currently offered by EKS if needed.
+
 Once Terraform is done, run the command below to update your kubeconfig and access the cluster:
 
 ```bash
