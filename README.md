@@ -12,7 +12,9 @@ terraform plan
 terraform apply
 ```
 
-The default EKS Kubernetes version is `1.36` (configured by `cluster_version` in `Terraform/variables.tf`). Override it with a version currently offered by EKS if needed.
+The default EKS Kubernetes version is `1.32` (configured by `cluster_version` in `Terraform/variables.tf`). The referenced `srepro/eks/aws` module version `0.0.7` creates `AL2_x86_64` node groups, which EKS only supports through Kubernetes `1.32`. Use a newer module version with a supported AMI type before selecting a newer Kubernetes version.
+
+If EKS still rejects the `aws-ebs-csi-driver` add-on version, update the add-on version in the module to one supported for the cluster's Kubernetes version and AWS region.
 
 Once Terraform is done, run the command below to update your kubeconfig and access the cluster:
 

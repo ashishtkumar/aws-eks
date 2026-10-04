@@ -5,9 +5,9 @@ variable "region" {
 }
 
 variable "cluster_version" {
-  description = "Kubernetes cluster version"
+  description = "Kubernetes cluster version (module v0.0.7 node groups support up to 1.32)"
   type        = string
-  default     = "1.36"
+  default     = "1.32"
 }
 
 variable "cluster_name" {
